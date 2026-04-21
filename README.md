@@ -6,7 +6,7 @@ In practice, building a useful machine learning system is not about maximizing m
 
 This project reframes income prediction as a resource allocation problem, where marketing actions must be prioritized across a diverse population with limited budget. By integrating classification and segmentation, the system identifies not only who is likely to be high-value, but also how different groups should be targeted.
 
-The focus is therefore on decision quality rather than model performance alone, ensuring that outputs are interpretable, robust, and directly applicable to real-world marketing strategy.
+The focus is therefore on decision quality rather than model performance alone, ensuring that outputs are interpretable, robust, and directly applicable to real-world marketing strategy. The system is designed to align with real-world financial decision-making processes, where model outputs must be interpretable, auditable, and continuously monitored for stability over time.
 
 ## Key Results
 
@@ -22,6 +22,7 @@ The focus is therefore on decision quality rather than model performance alone, 
 - Build a **robust classification model** for income prediction
 - Perform **interpretable segmentation** based on demographic and labor-market characteristics
 - Ensure all analysis respects the **survey sampling structure (weight variable)**
+- Enables a structured tradeoff between precision and recall, allowing marketing strategies to be explicitly optimized for return on investment (ROI)
 
 ---
 
@@ -299,6 +300,14 @@ Outputs:
 
 - Model outputs should be interpreted as decision-support signals rather than absolute predictions, and used in conjunction with business constraints.
 
+---
+
+## ⚙️ Production Considerations
+
+- Model performance should be monitored using metrics such as ROC AUC, Precision/Recall, and Population Stability Index (PSI)
+- Feature distributions (e.g., capital gains, occupation) should be tracked over time to detect drift
+- Thresholds should be periodically re-evaluated based on business objectives and changing market conditions
+  
 ---
 
 ## ⚠️ Risk & Limitations
