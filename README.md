@@ -14,7 +14,7 @@ The focus is therefore on decision quality rather than model performance alone, 
 - Precision-focused threshold reduces Customer Acquisition Cost (CAC) inefficiency
 - Segmentation enables 4 actionable customer personas
 - Deprioritizing low-value segments reduces unnecessary outreach while preserving high-value coverage
-- 
+
 ---
 
 ## 🎯 Objectives
