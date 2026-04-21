@@ -25,9 +25,8 @@ The focus is therefore on decision quality rather than model performance alone, 
 - Enables a structured tradeoff between precision and recall, allowing marketing strategies to be explicitly optimized for return on investment (ROI)
 
 ---
-
 ## 📂 Project Structure
-
+```
 TakeHomeProject/
 ├── data/
 │   ├── census-bureau.data
@@ -46,6 +45,8 @@ TakeHomeProject/
 │   └── best_model.joblib
 ├── README.md
 ├── requirements.txt
+```
+This structure separates data processing, modeling, and evaluation modules for clarity and scalability.
 
 ---
 
