@@ -55,9 +55,12 @@ TakeHomeProject/
 python src/train_model.py
 
 # Run segmentation
-python src/segmentation.py```
+python src/segmentation.py
+
+---
 
 These steps form the end-to-end pipeline for model training and segmentation analysis.
+
 ---
 
 ## 🔍 Key Design Decisions
