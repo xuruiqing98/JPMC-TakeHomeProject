@@ -48,6 +48,19 @@ TakeHomeProject/
 
 ---
 
+## Run Pipeline
+
+```bash
+# Train classification model
+python src/train_model.py
+
+# Run segmentation
+python src/segmentation.py
+
+```text
+These steps form the end-to-end pipeline for model training and segmentation analysis.
+---
+
 ## 🔍 Key Design Decisions
 
 ### 1. Treating Integer Codes as Categorical
