@@ -8,6 +8,13 @@ This project reframes income prediction as a resource allocation problem, where 
 
 The focus is therefore on decision quality rather than model performance alone, ensuring that outputs are interpretable, robust, and directly applicable to real-world marketing strategy.
 
+## Key Results
+
+- ROC AUC: ~0.95, indicating strong ranking performance
+- Precision-focused threshold reduces Customer Acquisition Cost (CAC) inefficiency
+- Segmentation enables 4 actionable customer personas
+- Deprioritizing low-value segments reduces unnecessary outreach while preserving high-value coverage
+- 
 ---
 
 ## 🎯 Objectives
@@ -138,7 +145,7 @@ Due to class imbalance:
 
 ### Threshold Optimization
 
-Decision threshold is tuned using validation data to maximize **F1-score**
+Threshold selection is treated as a business decision, balancing Customer Acquisition Cost (CAC) against missed high-value opportunities.
 
 Additionally, threshold sensitivity is evaluated:
 
@@ -201,24 +208,11 @@ The clustering reveals a **lifecycle-driven structure**:
 
 ### Business Insight
 
-Segmentation is driven primarily by:
+Segmentation is primarily driven by labor-force participation, education level, and life stage. This indicates that income is structurally linked to employment engagement and socio-economic stability, with high-value individuals concentrated in professionally stable groups.
 
-- Labor-force participation
-- Education level
-- Life stage
+From a business perspective, these segments enable differentiated marketing strategies. High-income, stable professionals can be directly targeted with premium products, while early-career individuals benefit from long-term engagement strategies. Low participation groups are deprioritized due to limited expected return.
 
-This suggests:
-
-- Income is structurally tied to employment engagement
-- High-value segments are professionally and socially stable groups
-
-From a business perspective, these segments enable differentiated marketing strategies:
-
-- High-income, stable professionals → primary targets for direct marketing
-- Early-career individuals → long-term nurturing and engagement strategies
-- Low labor-force participation groups → lower priority due to limited expected return
-
-This segmentation allows marketing resources to be allocated based on expected return on investment (ROI), rather than treating all individuals uniformly. In practice, this enables the integration of segmentation with model predictions, where targeting decisions can be jointly informed by both predicted income probability and segment-level characteristics.
+By integrating segmentation with model predictions, the system supports segment-specific playbooks where targeting decisions are informed by both predicted income probability and underlying socio-economic context. This allows marketing resources to be allocated more efficiently, improving return on investment while reducing unnecessary outreach.
 
 ---
 
@@ -297,7 +291,7 @@ Outputs:
 
 - The dataset is based on 1994–1995 census data, which may not reflect current labor market dynamics.
 - Demographic variables (e.g., gender, occupation) may introduce bias, raising fairness considerations in marketing decisions.
-- Model performance may degrade over time due to distribution shift (e.g., changes in workforce composition).
+- Model performance may degrade over time due to distribution shift, requiring ongoing monitoring through Population Stability Index (PSI) and feature drift tracking.
 
 These factors should be considered before deploying the model in real-world settings.
 
